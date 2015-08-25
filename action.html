@@ -1,0 +1,384 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+#wraper{
+	width: 100%;
+	height: 5000px;
+}
+#a1{
+position: fixed;height: 100%;
+}
+#a2{
+position: fixed;height: 100%;
+}
+#a3{
+position: fixed;height: 100%;
+}
+#b1{
+position: fixed;height: 100%;
+}
+#b2{
+position: fixed;height: 100%;
+}
+#b3{
+position: fixed;height: 100%;
+}
+#at1{
+position: fixed;height: 100%;
+}
+#at2{
+position: fixed;height: 100%;
+}
+#at3{
+position: fixed;height: 100%;
+}
+#bt1{
+position: fixed;height: 100%;
+}
+#bt2{
+position: fixed;height: 100%;
+}
+#bt3{
+position: fixed;height: 100%;
+}
+#s1{
+position: fixed;height: 100%;
+}
+#s2{
+position: fixed;height: 100%;
+}
+#s3{
+position: fixed;height: 100%;
+}
+#a{
+	position: fixed;
+	height: 100%;
+}
+#first{
+	background-color: #06F;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	position: absolute;
+}
+#boy{
+	width: 10%;
+	left: 0%;
+	height: 50%;
+	top: 0%;
+	padding: 10% 0 0 10%;
+}
+#skip{
+	width: 20%;
+	left: 85%;
+	height: 8%;
+	top: 90%;
+	position: fixed;
+}
+#skip2{
+    height:100%;
+	left: 0px;
+	top: 80%;
+	position: fixed;
+}
+#fabric{
+	background-image:url(action/5-120915124415.png);
+	background-repeat: repeat;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+}
+</style>
+
+
+<script type="text/javascript">
+function refrush(){
+console.log(document.body.scrollTop);
+if(document.body.scrollTop < 100){	<!-----设置隐藏区间单---->
+console.log('aa');
+fabric.style.top = (100-document.body.scrollTop/4)+ '%';
+fabric.style.left = '0px';
+
+}
+
+
+
+
+else if(document.body.scrollTop >=100 && document.body.scrollTop < 400){	<!-----设置滑动出现区间,背景上移---->
+console.log('bb');
+fabric.style.top = (100-document.body.scrollTop/4)+ '%';
+fabric.style.left = '0px';
+<!-----隐藏---->
+a.style.left='100%'
+}
+<!-----1设置向左出现长链区间,背景上移---->
+else if(document.body.scrollTop >=400 && document.body.scrollTop <1200){	
+console.log('bb');
+fabric.style.top ='0px' ;
+a.style.top='80%';
+a.style.left=(-document.body.scrollTop/8+150) + '%';
+<!-----隐藏---->
+a1.style.left='-200%'
+b1.style.left='-200%'
+s1.style.left='-200%'
+at1.style.left='-200%'
+bt1.style.left='-200%'
+a1.style.top='-200%'
+b1.style.top='-200%'
+s1.style.top='-200%'
+at1.style.top='-200%'
+bt1.style.top='-200%'
+}
+
+
+<!-----2加链---->
+else if(document.body.scrollTop >=1200 && document.body.scrollTop < 1800){
+	
+console.log('bb');
+a.style.left = '0px';<!-----x.style.---->
+<!-----隐藏---->
+a2.style.left='-200%'
+b2.style.left='-200%'
+s2.style.left='-200%'
+at2.style.left='-200%'
+bt2.style.left='-200%'
+a2.style.top='-200%'
+b2.style.top='-200%'
+s2.style.top='-200%'
+at2.style.top='-200%'
+bt2.style.top='-200%'
+<!-----显现---->
+s1.style.left=((document.body.scrollTop-1200)/12-50)+ '%';
+b1.style.left=((document.body.scrollTop-1200)/12-20)+ '%';
+a1.style.left=((document.body.scrollTop-1200)/12-35)+ '%';
+at1.style.left=((document.body.scrollTop-1200)/12)+ '%';
+bt1.style.left=((document.body.scrollTop-1200)/12+15)+ '%';
+s1.style.top=((document.body.scrollTop-1200)/6-100)+ '%';
+b1.style.top=((document.body.scrollTop-1200)/6-100)+ '%';
+a1.style.top=((document.body.scrollTop-1200)/6-100)+ '%';
+at1.style.top=((document.body.scrollTop-1200)/6-100)+ '%';
+bt1.style.top=((document.body.scrollTop-1200)/6-100)+ '%';
+}
+
+
+
+
+<!-----3三螺旋---->
+else if(document.body.scrollTop >=1800 && document.body.scrollTop < 2100){
+	
+console.log('bb');
+<!-----隐藏---->
+a1.style.left='-200%'
+b1.style.left='-200%'
+s1.style.left='-200%'
+at1.style.left='-200%'
+bt1.style.left='-200%'
+a3.style.left='-200%'
+b3.style.left='-200%'
+s3.style.left='-200%'
+at3.style.left='-200%'
+bt3.style.left='-200%'
+a3.style.top='-200%'
+b3.style.top='-200%'
+s3.style.top='-200%'
+at3.style.top='-200%'
+bt3.style.top='-200%'
+a1.style.left='-200%'
+b1.style.left='-200%'
+s1.style.left='-200%'
+at1.style.left='-200%'
+bt1.style.left='-200%'
+a1.style.top='-200%'
+b1.style.top='-200%'
+s1.style.top='-200%'
+at1.style.top='-200%'
+bt1.style.top='-200%'
+<!-----显现---->
+a2.style.left='12%'
+b2.style.left='25%'
+s2.style.left='-9%'
+at2.style.left='48%'
+bt2.style.left='69%'
+a2.style.top='8%'
+b2.style.top='-4%'
+s2.style.top='8%'
+at2.style.top='8%'
+bt2.style.top='-4%'
+
+
+}
+
+
+
+
+	<!-----4成环---->
+else if(document.body.scrollTop >=2100 && document.body.scrollTop < 2800){
+
+console.log('bb');
+a.style.left = '0px';
+a.style.top='80%';
+
+<!-----隐藏---->
+a2.style.left='-200%'
+b2.style.left='-200%'
+s2.style.left='-200%'
+at2.style.left='-200%'
+bt2.style.left='-200%'
+a2.style.top='-200%'
+b2.style.top='-200%'
+s2.style.top='-200%'
+at2.style.top='-200%'
+bt2.style.top='-200%'
+<!-----显现---->
+a3.style.left='39%'
+b3.style.left='54.3%'
+s3.style.left='23.5%'
+at3.style.left='75.5%'
+bt3.style.left='90.7%'
+a3.style.top='31.5%'
+b3.style.top='28.5%'
+s3.style.top='32%'
+at3.style.top='31.5%'
+bt3.style.top='28.5%'
+}
+
+
+
+
+
+<!-----5集体下移，章鱼gif出现---->
+else if(document.body.scrollTop >=2800 && document.body.scrollTop < 3100){
+	
+console.log('bb');
+
+a.style.left = '0px';
+a.style.top=((document.body.scrollTop-2800)/12  +80)+ '%';
+<!-----显现---->
+a3.style.left='39%';
+b3.style.left='54.3%';
+s3.style.left='23.5%';
+at3.style.left='75.5%';
+bt3.style.left='90.7%';
+a3.style.top=((document.body.scrollTop-2800)/12  +31.5)+ '%';
+b3.style.top=((document.body.scrollTop-2800)/12  +28.5)+ '%';
+s3.style.top=((document.body.scrollTop-2800)/12  +32)+ '%';
+at3.style.top=((document.body.scrollTop-2800)/12  +31.5)+ '%';
+bt3.style.top=((document.body.scrollTop-2800)/12  +28.5)+ '%';
+}
+<!-----6卡上s，刀限制酶出现---->
+else if(document.body.scrollTop >=3100 && document.body.scrollTop < 3400){
+console.log('bb');
+}
+
+<!-----7AB1，碎片---->
+else if(document.body.scrollTop >=3100 && document.body.scrollTop < 3400){
+console.log('bb');
+}
+<!-----8AB2---->
+else if(document.body.scrollTop >=3100 && document.body.scrollTop < 3400){
+console.log('bb');
+}
+<!-----9AB3---->
+else if(document.body.scrollTop >=3100 && document.body.scrollTop < 3400){
+console.log('bb');
+}
+<!-----10BA左移，标明构象转变---->
+else if(document.body.scrollTop >=3100 && document.body.scrollTop < 3400){
+console.log('bb');
+}
+
+<!-----11Nicking，gif，继续左移至第一个A看不见---->
+else if(document.body.scrollTop >=3100 && document.body.scrollTop < 3400){
+console.log('bb');
+}
+<!-----12停止移动，B出现缺口，剪刀还在，构象转为ABt---->
+else if(document.body.scrollTop >=3100 && document.body.scrollTop < 3400){
+console.log('bb');
+}
+
+<!-----13整体转化为图片缩小---->
+else if(document.body.scrollTop >=3100 && document.body.scrollTop < 3400){
+console.log('bb');
+}
+<!-----14gifABABABABABA---->
+else if(document.body.scrollTop >=3100 && document.body.scrollTop < 3400){
+console.log('bb');
+}
+<!-----15finally渐隐渐现---->
+else if(document.body.scrollTop >=3100 && document.body.scrollTop < 3400){
+console.log('bb');
+}
+
+<!-----16接收装置---->
+else if(document.body.scrollTop >=3100 && document.body.scrollTop < 3400){
+console.log('bb');
+fabric.style.left = '0px';
+fabric.style.top = '0px';
+}
+
+
+else{
+<!--  a.style.top = (document.body.scrollTop-7200 ) + 'px';
+<!-----设撤退顶部距离---->
+
+<!-----隐藏---->
+a3.style.left='-200%'
+b3.style.left='-200%'
+s3.style.left='-200%'
+at3.style.left='-200%'
+bt3.style.left='-200%'
+a3.style.top='-200%'
+b3.style.top='-200%'
+s3.style.top='-200%'
+at3.style.top='-200%'
+bt3.style.top='-200%'
+a.style.top='-200%'
+<!--  a.style.left = '4000px';<!-----设置撤退左距离---->
+fabric.style.left = '0px';
+fabric.style.top = (3000-document.body.scrollTop)+ 'px';<!-----修改为开始隐藏位置---->
+}
+}
+</script>
+
+
+</head>
+<body>
+
+<div id="first">
+<div id="boy"><img src="images/boy.png" width="auto" height="200%"></div>
+
+</div>
+<!-----第一页---->
+
+
+
+<div id="wraper"></div>
+
+<div id="fabric"></div>
+<div id="a1"><img src="action/A1.png"  height="87.8%"></div>
+<div id="a2"><img src="action/A2.png"  height="77.9%"></div>
+<div id="a3"><img src="action/A.png"height="54.9%"></div>
+<div id="b1"><img src="action/B1.png"  height="87.8%"></div>
+<div id="b2"><img src="action/B2.png"  height="91.1%"></div>
+<div id="b3"><img src="action/B.png" height="58%"></div>
+<div id="at1"><img src="action/A1.png"  height="87.8%"></div>
+<div id="at2"><img src="action/A2.png" height="77.9%"></div>
+<div id="at3"><img src="action/A.png" height="54.9%"></div>
+<div id="bt1"><img src="action/B1.png"  height="87.8%"></div>
+<div id="bt2"><img src="action/B2.png" height="91.1%"></div>
+<div id="bt3"><img src="action/B.png" height="58%"></div>
+<div id="s1"><img src="action/S1.png" height="87.6%"></div>
+<div id="s2"><img src="action/S2.png"height="77.9%"></div>
+<div id="s3"><img src="action/S.png"height="54.9%"></div>
+<div id="a"><img src="action/线.png" height="15%"></div>
+<script type="text/javascript">
+document.onscroll = refrush;
+</script>
+<div id="skip"><a href="index.htm"><img src="images/skip.png" border="0" style="height: 100%;"/></a></div>
+
+</body>
+</html>
